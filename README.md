@@ -12,6 +12,10 @@ I think there probably can be!
 
 This is just a test. But we need something to solve this for [magpai.app](https://magpai.app), so we're playing around with this...
 
+## Running Server
+
+`flask --app server run`
+
 ## Problems
 
 ### Prediction API endpoint doesnt include model and user name needed for cog/docker
@@ -33,6 +37,7 @@ Magpai deals mostly with base64 encoded data, so hopefully we can just send that
  - Install Cog if not installed
  - Install Docker if not installed
  - Install WSL on windows if not installed
+ - Better response when model is being downloaded...
  - Create a bundlable executable
  - Webhooks
  - https://github.com/replicate/cog/issues/1459 (Australia is very far from r8.im...)

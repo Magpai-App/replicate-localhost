@@ -3,7 +3,7 @@ import pprint
 
 PREDICTION_ID = "REPLACE_ME"
 
-url = "http://localhost:5000/v1/predictions/" + PREDICTION_ID
+url = "http://127.0.0.1:5000/v1/predictions/" + PREDICTION_ID
 headers = {
     "Authorization": "Token NOT_A_REAL_TOKEN",
     "Content-Type": "application/json"

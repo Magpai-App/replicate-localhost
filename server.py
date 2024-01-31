@@ -20,6 +20,9 @@ def run_command(cmd, id):
 
         stdout, stderr = process.communicate()
 
+        if "Failed to determine if" in stderr.decode():
+            raise Exception("Docker is not running")
+
         JOBS[id].update(
             {
                 "status": "succeeded",
@@ -30,8 +33,7 @@ def run_command(cmd, id):
             }
         )
     except Exception as e:
-        JOBS[id] = {"status": "failed", "error": str(e)}
-    print(JOBS)
+        JOBS[id].update({"status": "failed", "error": str(e)})
 
 
 @app.route("/v1/predictions", methods=["POST"])
